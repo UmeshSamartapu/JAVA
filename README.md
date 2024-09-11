@@ -21,7 +21,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.421-b09,mixed mode)
 javac 1.8
 </pre>
 <h1>PS C:> javac HelloWorld.java</h1>
-<p>a HelloWorld.class file is created</p>
 <h1>PS C:> java HelloWorld</h1>
 <pre>
 Hello, World!
