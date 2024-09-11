@@ -2,7 +2,6 @@ Hey !This is my "OOPS" repo <p>
 <h1>create a file </h1>
 <p>HelloWorld.java</p>
 <pre>
-HelloWorld.java
 public class HelloWorld 
 {
 
