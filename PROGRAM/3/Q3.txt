@@ -1,4 +1,119 @@
 3. 
 A) Develop an applet in Java that displays a simple message. 
+ 
+HelloWorldApplet.java
+
+import java.applet.Applet;
+import java.awt.Graphics;
+
+/* 
+<applet code="HelloWorldApplet.class" width="300" height="100">
+</applet> 
+*/
+
+public class HelloWorldApplet extends Applet {
+
+    @Override
+    public void paint(Graphics g) {
+        // Set the message to be displayed
+        g.drawString("Hello, World!", 20, 50); 
+        // Draw the string at coordinates (20, 50)
+    }
+}
+
+index.html
+<html>
+<body>
+   <applet code="HelloWorldApplet.class" width="300" height="100">
+   </applet>
+</body>
+</html>
+
 B) Develop an applet in Java that receives an integer in one text field, and computes its factorial 
 Value and returns it in another text field, when the button named “Compute” is clicked. 
+
+FactorialApplet.java
+
+import java.applet.Applet;
+import java.awt.*;
+import java.awt.event.*;
+
+public class FactorialApplet extends Applet implements ActionListener {
+    // Declare UI components
+    TextField inputField, outputField;
+    Button computeButton;
+
+    // Initialize the applet
+    public void init() {
+        // Set layout
+        setLayout(new FlowLayout());
+
+        // Initialize components
+        Label inputLabel = new Label("Enter an integer:");
+        inputField = new TextField(10);
+        Label outputLabel = new Label("Factorial:");
+        outputField = new TextField(15);
+        outputField.setEditable(false);  
+        // Output field should be read-only
+        computeButton = new Button("Compute");
+
+        // Add components to the applet
+        add(inputLabel);
+        add(inputField);
+        add(computeButton);
+        add(outputLabel);
+        add(outputField);
+
+        // Add action listener to the button
+        computeButton.addActionListener(this);
+    }
+
+    // Handle button click event
+    public void actionPerformed(ActionEvent e) {
+        try {
+            // Get input value from the text field
+            int number = Integer.parseInt(inputField.getText());
+            // Compute factorial
+            long factorial = computeFactorial(number);
+            // Set output value in the output field
+            outputField.setText(String.valueOf(factorial));
+        } catch (NumberFormatException ex) {
+            outputField.setText("Invalid Input");
+        }
+    }
+
+    // Method to compute factorial
+    private long computeFactorial(int n) {
+        if (n < 0) return 0; // Return 0 for negative numbers as factorial is not defined
+        long fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
+}
+
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factorial Applet</title>
+</head>
+<body>
+    <h1>Factorial Applet Example</h1>
+    <p>Enter an integer to compute its factorial:</p>
+    
+    <!-- Applet Tag to Embed Java Applet -->
+    <applet code="FactorialApplet.class" width="400" height="200">
+        <!-- If the applet doesn't load, display this message -->
+        Your browser does not support Java Applets or the Java Plugin is not enabled.
+    </applet>
+</body>
+</html>
+
+
+PS C:> javac FactorialApplet.javava
+PS C:> appletviewer FactorialApplet.html
