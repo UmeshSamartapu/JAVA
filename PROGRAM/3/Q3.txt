@@ -1,0 +1,4 @@
+3. 
+A) Develop an applet in Java that displays a simple message. 
+B) Develop an applet in Java that receives an integer in one text field, and computes its factorial 
+Value and returns it in another text field, when the button named “Compute” is clicked. 
