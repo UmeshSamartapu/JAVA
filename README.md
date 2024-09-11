@@ -4,15 +4,10 @@ Hey !This is my "OOPS" repo <p>
 <pre>
 public class HelloWorld 
 {
-
     public static void main(String[] args)
-
     {
-
        System.out.println("Hello, World!");
-
     }
-
 }
 </pre>
 <h1>PS C:> java -version</h1>
