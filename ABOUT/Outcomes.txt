@@ -1,0 +1,4 @@
+● Able to write programs for solving real world problems using the java collection framework. 
+● Able to write programs using abstract classes. 
+● Able to write multithreaded programs. 
+● Able to write GUI programs using swing controls in Java.

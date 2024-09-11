@@ -1,0 +1,6 @@
+● To write programs using abstract classes. 
+● To write programs for solving real world problems using the java collection framework. 
+● To write multithreaded programs. 
+● To write GUI programs using swing controls in Java. 
+● To introduce java compiler and eclipse platform. 
+● To impart hands-on experience with java programming. 
