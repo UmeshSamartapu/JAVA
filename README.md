@@ -1,12 +1,21 @@
 Hey !This is my "OOPS" repo <p>
 <h1>create a file </h1>
-HelloWorld.java <p>
-public class HelloWorld { <p>
-    public static void main(String[] args) <p>
-    {<p>
-        System.out.println("Hello, World!"); <p>
-    } <p>
-} <p>
+<p>HelloWorld.java</p>
+<pre>
+HelloWorld.java
+public class HelloWorld 
+{
+
+    public static void main(String[] args)
+
+    {
+
+       System.out.println("Hello, World!");
+
+    }
+
+}
+</pre>
 <h1>PS C:> java -version</h1>
 java version "1.8.0"<p>
 Java(TM) SE Runtime Environment (build 1.8.0_421-b09) <p>
